@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "cc7ba3e6ad09c5afe2209b92b34df703"
+build_time: [534692962, 718814000]
+inputs:
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/4-Foundational iOS/RetroCalc/RetroCalc/ViewController.swift": [534648939, 0]
+  "/Users/stitch/Documents/Informatique/iOS/iOS10/4-Foundational iOS/RetroCalc/RetroCalc/AppDelegate.swift": [534602683, 0]
