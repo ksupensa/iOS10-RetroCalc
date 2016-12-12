@@ -137,14 +137,25 @@ SWIFT_CLASS("_TtC9RetroCalc11AppDelegate")
 
 @class AVAudioPlayer;
 @class UIButton;
+@class UILabel;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC9RetroCalc14ViewController")
 @interface ViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified OutputLbl;
 @property (nonatomic, strong) AVAudioPlayer * _Null_unspecified btnSound;
+@property (nonatomic, copy) NSString * _Nonnull runningNumber;
+@property (nonatomic, copy) NSString * _Nonnull leftValStr;
+@property (nonatomic, copy) NSString * _Nonnull rightValStr;
+@property (nonatomic, copy) NSString * _Nonnull result;
 - (void)viewDidLoad;
 - (IBAction)numberPressedWithSender:(UIButton * _Nonnull)sender;
+- (IBAction)onDividePressedWithSender:(id _Nonnull)sender;
+- (IBAction)onMultiplyPressedWithSender:(id _Nonnull)sender;
+- (IBAction)onAddPressedWithSender:(id _Nonnull)sender;
+- (IBAction)onSubstractPressedWithSender:(id _Nonnull)sender;
+- (IBAction)onEqualPressedWithSender:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

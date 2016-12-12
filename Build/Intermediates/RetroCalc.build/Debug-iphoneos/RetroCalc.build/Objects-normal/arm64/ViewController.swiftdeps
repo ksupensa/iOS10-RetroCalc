@@ -8,43 +8,45 @@ provides-member:
 - ["C9RetroCalc14ViewController", ""]
 - ["OC9RetroCalc14ViewController9Operation", ""]
 provides-dynamic-lookup:
-- "leftValStr"
-- "onDividePressed"
-- "OutputLbl"
-- "rightValStr"
 - "runningNumber"
 - "result"
-- "onSubstractPressed"
-- "onEqualPressed"
-- "onMultiplyPressed"
+- "OutputLbl"
+- "leftValStr"
+- "viewDidLoad"
 - "numberPressed"
 - "btnSound"
+- "rightValStr"
+- "onClearPressed"
+- "onDividePressed"
+- "onMultiplyPressed"
 - "onAddPressed"
-- "viewDidLoad"
+- "onSubstractPressed"
+- "onEqualPressed"
 depends-top-level:
-- "UILabel"
-- !private "/"
-- "String"
-- "StringLiteralType"
-- !private "!="
-- !private "+="
-- "UIViewController"
-- !private "NSError"
 - "UnicodeScalarType"
+- "AssignmentPrecedence"
+- !private "~="
+- !private "Bundle"
 - !private "-"
-- !private "*"
-- "ViewController"
-- !private "URL"
+- !private "!"
+- !private "+"
+- "StringLiteralType"
+- "UIButton"
+- "UIViewController"
 - !private "print"
+- !private "URL"
+- !private "Double"
+- "UILabel"
+- "String"
+- !private "NSError"
+- !private "+="
+- !private "!="
+- !private "*"
+- !private "/"
 - "AnyObject"
 - "AVAudioPlayer"
-- !private "Bundle"
-- !private "+"
+- "ViewController"
 - "=="
-- !private "~="
-- "AssignmentPrecedence"
-- "UIButton"
-- !private "Double"
 depends-member:
 - ["CSo13AVAudioPlayer", "deinit"]
 - !private ["CSo13AVAudioPlayer", "init"]
@@ -63,11 +65,13 @@ depends-member:
 - ["Ps9AnyObject", "currentOperation"]
 - !private ["Ps9AnyObject", "debugDescription"]
 - ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isEmpty"]
 - !private ["Ps9AnyObject", "isPlaying"]
 - ["Ps9AnyObject", "leftValStr"]
 - !private ["Ps9AnyObject", "main"]
 - ["Ps9AnyObject", "numberPressed"]
 - ["Ps9AnyObject", "onAddPressed"]
+- ["Ps9AnyObject", "onClearPressed"]
 - ["Ps9AnyObject", "onDividePressed"]
 - ["Ps9AnyObject", "onEqualPressed"]
 - ["Ps9AnyObject", "onMultiplyPressed"]
@@ -106,11 +110,13 @@ depends-member:
 - !private ["Ps7CVarArg", "debugDescription"]
 - !private ["Ps7CVarArg", "hashValue"]
 - ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isEmpty"]
 - !private ["Ps7CVarArg", "isPlaying"]
 - ["Ps7CVarArg", "leftValStr"]
 - !private ["Ps7CVarArg", "main"]
 - ["Ps7CVarArg", "numberPressed"]
 - ["Ps7CVarArg", "onAddPressed"]
+- ["Ps7CVarArg", "onClearPressed"]
 - ["Ps7CVarArg", "onDividePressed"]
 - ["Ps7CVarArg", "onEqualPressed"]
 - ["Ps7CVarArg", "onMultiplyPressed"]
@@ -133,6 +139,7 @@ depends-member:
 - !private ["Vs11ClosedRange", "deinit"]
 - !private ["Ps10Comparable", "hashValue"]
 - ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "isEmpty"]
 - !private ["Vs20CountableClosedRange", "deinit"]
 - !private ["Vs14CountableRange", "deinit"]
 - !private ["Ps28CustomDebugStringConvertible", "AVAudioPlayer"]
@@ -145,11 +152,13 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "currentOperation"]
 - !private ["Ps28CustomDebugStringConvertible", "debugDescription"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isEmpty"]
 - !private ["Ps28CustomDebugStringConvertible", "isPlaying"]
 - ["Ps28CustomDebugStringConvertible", "leftValStr"]
 - !private ["Ps28CustomDebugStringConvertible", "main"]
 - ["Ps28CustomDebugStringConvertible", "numberPressed"]
 - ["Ps28CustomDebugStringConvertible", "onAddPressed"]
+- ["Ps28CustomDebugStringConvertible", "onClearPressed"]
 - ["Ps28CustomDebugStringConvertible", "onDividePressed"]
 - ["Ps28CustomDebugStringConvertible", "onEqualPressed"]
 - ["Ps28CustomDebugStringConvertible", "onMultiplyPressed"]
@@ -171,9 +180,11 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "hashValue"]
 - ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "isEmpty"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "hashValue"]
 - ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "isEmpty"]
 - !private ["Ps23CustomStringConvertible", "AVAudioPlayer"]
 - !private ["Ps23CustomStringConvertible", "Bundle"]
 - !private ["Ps23CustomStringConvertible", "Double"]
@@ -186,11 +197,13 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "debugDescription"]
 - !private ["Ps23CustomStringConvertible", "hashValue"]
 - ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isEmpty"]
 - !private ["Ps23CustomStringConvertible", "isPlaying"]
 - ["Ps23CustomStringConvertible", "leftValStr"]
 - !private ["Ps23CustomStringConvertible", "main"]
 - ["Ps23CustomStringConvertible", "numberPressed"]
 - ["Ps23CustomStringConvertible", "onAddPressed"]
+- ["Ps23CustomStringConvertible", "onClearPressed"]
 - ["Ps23CustomStringConvertible", "onDividePressed"]
 - ["Ps23CustomStringConvertible", "onEqualPressed"]
 - ["Ps23CustomStringConvertible", "onMultiplyPressed"]
@@ -230,11 +243,13 @@ depends-member:
 - !private ["Ps9Equatable", "debugDescription"]
 - ["Ps9Equatable", "hashValue"]
 - ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isEmpty"]
 - !private ["Ps9Equatable", "isPlaying"]
 - ["Ps9Equatable", "leftValStr"]
 - !private ["Ps9Equatable", "main"]
 - ["Ps9Equatable", "numberPressed"]
 - ["Ps9Equatable", "onAddPressed"]
+- ["Ps9Equatable", "onClearPressed"]
 - ["Ps9Equatable", "onDividePressed"]
 - ["Ps9Equatable", "onEqualPressed"]
 - ["Ps9Equatable", "onMultiplyPressed"]
@@ -257,12 +272,16 @@ depends-member:
 - !private ["Ps5Error", "debugDescription"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "isEmpty"]
 - !private ["Ps25ExpressibleByFloatLiteral", "init"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "hashValue"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "init"]
 - ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "isEmpty"]
 - ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "isEmpty"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "isEmpty"]
 - !private ["Sf", "deinit"]
 - !private ["Ps13FloatingPoint", "init"]
 - !private ["Ps8Hashable", "AVAudioPlayer"]
@@ -284,11 +303,13 @@ depends-member:
 - !private ["Ps8Hashable", "debugDescription"]
 - ["Ps8Hashable", "hashValue"]
 - ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isEmpty"]
 - !private ["Ps8Hashable", "isPlaying"]
 - ["Ps8Hashable", "leftValStr"]
 - !private ["Ps8Hashable", "main"]
 - ["Ps8Hashable", "numberPressed"]
 - ["Ps8Hashable", "onAddPressed"]
+- ["Ps8Hashable", "onClearPressed"]
 - ["Ps8Hashable", "onDividePressed"]
 - ["Ps8Hashable", "onEqualPressed"]
 - ["Ps8Hashable", "onMultiplyPressed"]
@@ -319,8 +340,10 @@ depends-member:
 - !private ["Ps17IntegerArithmetic", "hashValue"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps25LosslessStringConvertible", "isEmpty"]
 - !private ["Ps10MirrorPath", "hashValue"]
 - ["Ps10MirrorPath", "init"]
+- !private ["Ps10MirrorPath", "isEmpty"]
 - ["CSo7NSCoder", "deinit"]
 - !private ["PSo8NSCoding", "AVAudioPlayer"]
 - !private ["PSo8NSCoding", "Bundle"]
@@ -332,9 +355,11 @@ depends-member:
 - ["PSo8NSCoding", "currentOperation"]
 - !private ["PSo8NSCoding", "debugDescription"]
 - ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isEmpty"]
 - ["PSo8NSCoding", "leftValStr"]
 - ["PSo8NSCoding", "numberPressed"]
 - ["PSo8NSCoding", "onAddPressed"]
+- ["PSo8NSCoding", "onClearPressed"]
 - ["PSo8NSCoding", "onDividePressed"]
 - ["PSo8NSCoding", "onEqualPressed"]
 - ["PSo8NSCoding", "onMultiplyPressed"]
@@ -351,6 +376,7 @@ depends-member:
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "debugDescription"]
 - ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "isEmpty"]
 - !private ["CSo7NSError", "debugDescription"]
 - ["CSo7NSError", "deinit"]
 - !private ["PSo26NSExtensionRequestHandling", "AVAudioPlayer"]
@@ -365,6 +391,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "leftValStr"]
 - ["PSo26NSExtensionRequestHandling", "numberPressed"]
 - ["PSo26NSExtensionRequestHandling", "onAddPressed"]
+- ["PSo26NSExtensionRequestHandling", "onClearPressed"]
 - ["PSo26NSExtensionRequestHandling", "onDividePressed"]
 - ["PSo26NSExtensionRequestHandling", "onEqualPressed"]
 - ["PSo26NSExtensionRequestHandling", "onMultiplyPressed"]
@@ -378,6 +405,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "isEmpty"]
 - ["CSo8NSObject", "AVAudioPlayer"]
 - ["CSo8NSObject", "AnyObject"]
 - !private ["CSo8NSObject", "Bundle"]
@@ -393,11 +421,13 @@ depends-member:
 - ["CSo8NSObject", "currentOperation"]
 - !private ["CSo8NSObject", "debugDescription"]
 - ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isEmpty"]
 - !private ["CSo8NSObject", "isPlaying"]
 - ["CSo8NSObject", "leftValStr"]
 - !private ["CSo8NSObject", "main"]
 - ["CSo8NSObject", "numberPressed"]
 - ["CSo8NSObject", "onAddPressed"]
+- ["CSo8NSObject", "onClearPressed"]
 - ["CSo8NSObject", "onDividePressed"]
 - ["CSo8NSObject", "onEqualPressed"]
 - ["CSo8NSObject", "onMultiplyPressed"]
@@ -425,11 +455,13 @@ depends-member:
 - ["PSo16NSObjectProtocol", "currentOperation"]
 - !private ["PSo16NSObjectProtocol", "debugDescription"]
 - ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isEmpty"]
 - !private ["PSo16NSObjectProtocol", "isPlaying"]
 - ["PSo16NSObjectProtocol", "leftValStr"]
 - !private ["PSo16NSObjectProtocol", "main"]
 - ["PSo16NSObjectProtocol", "numberPressed"]
 - ["PSo16NSObjectProtocol", "onAddPressed"]
+- ["PSo16NSObjectProtocol", "onClearPressed"]
 - ["PSo16NSObjectProtocol", "onDividePressed"]
 - ["PSo16NSObjectProtocol", "onEqualPressed"]
 - ["PSo16NSObjectProtocol", "onMultiplyPressed"]
@@ -450,7 +482,9 @@ depends-member:
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "debugDescription"]
 - ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "isEmpty"]
 - ["CSo8NSString", "init"]
+- !private ["CSo8NSString", "isEmpty"]
 - ["OC9RetroCalc14ViewController9Operation", "Add"]
 - ["OC9RetroCalc14ViewController9Operation", "Divide"]
 - ["OC9RetroCalc14ViewController9Operation", "Empty"]
@@ -483,8 +517,11 @@ depends-member:
 - !private ["Ps10Strideable", "init"]
 - ["SS", "deinit"]
 - ["SS", "init"]
+- !private ["SS", "isEmpty"]
 - ["Ps16TextOutputStream", "init"]
+- !private ["Ps16TextOutputStream", "isEmpty"]
 - ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps20TextOutputStreamable", "isEmpty"]
 - !private ["PSo29UIAccessibilityIdentification", "tag"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo12UIAppearance", "tag"]
@@ -501,6 +538,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "leftValStr"]
 - ["PSo21UIAppearanceContainer", "numberPressed"]
 - ["PSo21UIAppearanceContainer", "onAddPressed"]
+- ["PSo21UIAppearanceContainer", "onClearPressed"]
 - ["PSo21UIAppearanceContainer", "onDividePressed"]
 - ["PSo21UIAppearanceContainer", "onEqualPressed"]
 - ["PSo21UIAppearanceContainer", "onMultiplyPressed"]
@@ -529,6 +567,7 @@ depends-member:
 - ["PSo18UIContentContainer", "leftValStr"]
 - ["PSo18UIContentContainer", "numberPressed"]
 - ["PSo18UIContentContainer", "onAddPressed"]
+- ["PSo18UIContentContainer", "onClearPressed"]
 - ["PSo18UIContentContainer", "onDividePressed"]
 - ["PSo18UIContentContainer", "onEqualPressed"]
 - ["PSo18UIContentContainer", "onMultiplyPressed"]
@@ -559,6 +598,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "leftValStr"]
 - ["PSo18UIFocusEnvironment", "numberPressed"]
 - ["PSo18UIFocusEnvironment", "onAddPressed"]
+- ["PSo18UIFocusEnvironment", "onClearPressed"]
 - ["PSo18UIFocusEnvironment", "onDividePressed"]
 - ["PSo18UIFocusEnvironment", "onEqualPressed"]
 - ["PSo18UIFocusEnvironment", "onMultiplyPressed"]
@@ -593,6 +633,7 @@ depends-member:
 - ["CSo11UIResponder", "leftValStr"]
 - ["CSo11UIResponder", "numberPressed"]
 - ["CSo11UIResponder", "onAddPressed"]
+- ["CSo11UIResponder", "onClearPressed"]
 - ["CSo11UIResponder", "onDividePressed"]
 - ["CSo11UIResponder", "onEqualPressed"]
 - ["CSo11UIResponder", "onMultiplyPressed"]
@@ -618,6 +659,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "leftValStr"]
 - ["PSo30UIResponderStandardEditActions", "numberPressed"]
 - ["PSo30UIResponderStandardEditActions", "onAddPressed"]
+- ["PSo30UIResponderStandardEditActions", "onClearPressed"]
 - ["PSo30UIResponderStandardEditActions", "onDividePressed"]
 - ["PSo30UIResponderStandardEditActions", "onEqualPressed"]
 - ["PSo30UIResponderStandardEditActions", "onMultiplyPressed"]
@@ -644,6 +686,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "leftValStr"]
 - ["PSo16UIStateRestoring", "numberPressed"]
 - ["PSo16UIStateRestoring", "onAddPressed"]
+- ["PSo16UIStateRestoring", "onClearPressed"]
 - ["PSo16UIStateRestoring", "onDividePressed"]
 - ["PSo16UIStateRestoring", "onEqualPressed"]
 - ["PSo16UIStateRestoring", "onMultiplyPressed"]
@@ -668,6 +711,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "leftValStr"]
 - ["PSo18UITraitEnvironment", "numberPressed"]
 - ["PSo18UITraitEnvironment", "onAddPressed"]
+- ["PSo18UITraitEnvironment", "onClearPressed"]
 - ["PSo18UITraitEnvironment", "onDividePressed"]
 - ["PSo18UITraitEnvironment", "onEqualPressed"]
 - ["PSo18UITraitEnvironment", "onMultiplyPressed"]
@@ -702,6 +746,7 @@ depends-member:
 - ["CSo16UIViewController", "leftValStr"]
 - ["CSo16UIViewController", "numberPressed"]
 - ["CSo16UIViewController", "onAddPressed"]
+- ["CSo16UIViewController", "onClearPressed"]
 - ["CSo16UIViewController", "onDividePressed"]
 - ["CSo16UIViewController", "onEqualPressed"]
 - ["CSo16UIViewController", "onMultiplyPressed"]
@@ -740,6 +785,7 @@ depends-member:
 - ["C9RetroCalc14ViewController", "leftValStr"]
 - ["C9RetroCalc14ViewController", "numberPressed"]
 - ["C9RetroCalc14ViewController", "onAddPressed"]
+- ["C9RetroCalc14ViewController", "onClearPressed"]
 - ["C9RetroCalc14ViewController", "onDividePressed"]
 - ["C9RetroCalc14ViewController", "onEqualPressed"]
 - ["C9RetroCalc14ViewController", "onMultiplyPressed"]
@@ -757,14 +803,19 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "isEmpty"]
 - !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "hashValue"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
 - ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "isEmpty"]
 - ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "isEmpty"]
 - ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "isEmpty"]
 - !private ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
 - ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "isEmpty"]
 - !private ["Ps9_Hashable", "AVAudioPlayer"]
 - !private ["Ps9_Hashable", "Add"]
 - !private ["Ps9_Hashable", "Bundle"]
@@ -784,11 +835,13 @@ depends-member:
 - !private ["Ps9_Hashable", "debugDescription"]
 - ["Ps9_Hashable", "hashValue"]
 - ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isEmpty"]
 - !private ["Ps9_Hashable", "isPlaying"]
 - ["Ps9_Hashable", "leftValStr"]
 - !private ["Ps9_Hashable", "main"]
 - ["Ps9_Hashable", "numberPressed"]
 - ["Ps9_Hashable", "onAddPressed"]
+- ["Ps9_Hashable", "onClearPressed"]
 - ["Ps9_Hashable", "onDividePressed"]
 - ["Ps9_Hashable", "onEqualPressed"]
 - ["Ps9_Hashable", "onMultiplyPressed"]
@@ -814,6 +867,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "isEmpty"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
 - !private ["Ps14_SignedInteger", "hashValue"]
 - !private ["Ps11_Strideable", "hashValue"]
@@ -942,4 +996,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
-interface-hash: "db81f8bdd5c94fc19cf92a91666a4838"
+interface-hash: "34f6746765650dcc1281cf2f807fab81"

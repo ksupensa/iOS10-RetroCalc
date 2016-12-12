@@ -73,6 +73,13 @@ class ViewController: UIViewController {
         processOperation(operation: currentOperation)
     }
     
+    @IBAction func onClearPressed(_ sender: Any) {
+        runningNumber = ""
+        currentOperation = Operation.Empty
+        OutputLbl.text = "0"
+        playSound()
+    }
+    
     private func playSound(){
         if btnSound.isPlaying {
             btnSound.stop()
@@ -89,19 +96,25 @@ class ViewController: UIViewController {
                 rightValStr = runningNumber
                 runningNumber = ""
                 
-                switch currentOperation {
-                case Operation.Add:
-                    result = "\(Double(leftValStr)! + Double(rightValStr)!)"
-                case Operation.Multiply:
-                    result = "\(Double(leftValStr)! * Double(rightValStr)!)"
-                case Operation.Divide:
-                    result = "\(Double(leftValStr)! / Double(rightValStr)!)"
-                default: //case Operation.Substract:
-                    result = "\(Double(leftValStr)! - Double(rightValStr)!)"
+                if !leftValStr.isEmpty {
+                    switch currentOperation {
+                    case Operation.Add:
+                        result = "\(Double(leftValStr)! + Double(rightValStr)!)"
+                    case Operation.Multiply:
+                        result = "\(Double(leftValStr)! * Double(rightValStr)!)"
+                    case Operation.Divide:
+                        result = "\(Double(leftValStr)! / Double(rightValStr)!)"
+                    default: //case Operation.Substract:
+                        result = "\(Double(leftValStr)! - Double(rightValStr)!)"
+                    }
+                    
+                    leftValStr = result
+                    OutputLbl.text = result
+                } else {
+                    runningNumber = ""
+                    currentOperation = Operation.Empty
+                    OutputLbl.text = "Input Error"
                 }
-                
-                leftValStr = result
-                OutputLbl.text = result
             }
             
             currentOperation = operation

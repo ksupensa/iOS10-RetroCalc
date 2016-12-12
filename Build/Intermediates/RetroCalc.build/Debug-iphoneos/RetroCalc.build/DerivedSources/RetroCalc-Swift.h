@@ -156,6 +156,7 @@ SWIFT_CLASS("_TtC9RetroCalc14ViewController")
 - (IBAction)onAddPressedWithSender:(id _Nonnull)sender;
 - (IBAction)onSubstractPressedWithSender:(id _Nonnull)sender;
 - (IBAction)onEqualPressedWithSender:(id _Nonnull)sender;
+- (IBAction)onClearPressed:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
